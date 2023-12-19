@@ -8,13 +8,13 @@ It stands for application programming interface.it is used to connect the front 
 
 It stands for hyper text transfer protocol.This communication protocol is widely used to send /receive the data over internet.
 
-**HTTP AND HTTPS How works:**when we search the webpage,images.send the form ,data is submitted over internet using http or secured version of it which is https .To communicate over http requires two parts one is client submits the request and other is the server which responses this request.When security is necessary we use the https not http bcz in https data is first encrypted by client side and then this is decrypted by server so no third party can access this data but in http a third party can access the data over net.
+**HTTP AND HTTPS How works:** when we search the webpage,images.send the form ,data is submitted over internet using http or secured version of it which is https .To communicate over http requires two parts one is client submits the request and other is the server which responses this request.When security is necessary we use the https not http bcz in https data is first encrypted by client side and then this is decrypted by server so no third party can access this data but in http a third party can access the data over net.
 
 **HTTP Methods**:also called verbs,there are **5 to access** the data over http **GET**(retrieve the data),**POST**(use to send the data to sever and create the record),**PUT**(it updates the whole record),**PATCH**(to update the partially update the data),**DELETE**(to delete the record).
 
-**HTTP requests:**it consists of different types of information encoded by a browser to send the information. A typically **request includes** the following:version type,url/path,http method, http request headers(these contains some extra information i.e. cookie,referer) and http body(optional) it contains our actual data that we sent ,Http Response(it contains also extra information like content type,length,headers,time,status code)this is the information that displays on the browser.
+**HTTP requests:** it consists of different types of information encoded by a browser to send the information. A typically **request includes** the following:version type,url/path,http method, http request headers(these contains some extra information i.e. cookie,referer) and http body(optional) it contains our actual data that we sent ,Http Response(it contains also extra information like content type,length,headers,time,status code)this is the information that displays on the browser.
 
-**Status Code:**These Provide the Useful information about the request and response process.Some are here:
+**Status Code:** These Provide the Useful information about the request and response process.Some are here:
 
 100-199informational,
 
@@ -36,7 +36,7 @@ REST is the architechure style to design the API,so it is mostly called restapi 
 
 **API would be said RESTful API if it contains** the client-server architechure ,stateless(no prior info about client to make api request or not to remember the previous request) and should be cacheable(it should stroed the responses on the server or on any machine,it reduces the server load and reduce time),should be layered(it should consists on layers through which any layer can remove any tme),uniform interface(unique urls,unified display format i.e.json,xml),provide code on demand.
 
-**Resources:**This means who want to access the app and so resource type will be according to that which api will be called i.e.if manager wants to know the orders detail the resource type will be orders object,for customer It will be customer object ,for deliver it will be deliver object and so on.
+**Resources:** This means who want to access the app and so resource type will be according to that which api will be called i.e.if manager wants to know the orders detail the resource type will be orders object,for customer It will be customer object ,for deliver it will be deliver object and so on.
 
 **Naming Conventions:The end** points of the Api should be valueable so it can make sense .1-always try keep lower case,meaningful word easy to read,write 2-if api accepts the variable for example userid or orderid then use the camelCase and keep them in the curly braces {userId},{orderId} etc./api/order/{orderId}/menu-item.3-Forward slash-if project has the related objects then should use the forward slash in the api to indicate their hierarchical relationship i.e.librarybooksauthor.
 
@@ -130,9 +130,9 @@ return Response({‘message’:’list of the books by’+author),status.http_20
 
 return Response({'message':'list of the books'},status=status.HTTP_200_OK)
 
-**Payload:**common term for json data or urlencoded data send to the api.as in content option {‘auth’:’ali’},its json data format.
+**Payload:** common term for json data or urlencoded data send to the api.as in content option {‘auth’:’ali’},its json data format.
 
-**How to accept the Primarykey in the methods of the class based view:**here is the code for this;also map this Book class in the urls.py file for setting the route;localhost:api/book/1
+**How to accept the Primarykey in the methods of the class based view:** here is the code for this;also map this Book class in the urls.py file for setting the route;localhost:api/book/1
 
 class Book(APIView):
 
@@ -146,7 +146,7 @@ def put(self,request,pk):
 
 return Response({"title":request.data.get('title')},status.HTTP_200_OK)
 
-**Django-debug-toolbar:**this toolbar is used for debugging the api and endpoints and many more.To install this toolbar run this command pipenv Django-debug-toolbar in the terminal in the vs code and add it in the setting .py file in the installed apps option as ‘debug_toolbar’. And then set it as a path in the main app under as:
+**Django-debug-toolbar:** this toolbar is used for debugging the api and endpoints and many more.To install this toolbar run this command pipenv Django-debug-toolbar in the terminal in the vs code and add it in the setting .py file in the installed apps option as ‘debug_toolbar’. And then set it as a path in the main app under as:
 
 **\# settings.py**
 
@@ -362,7 +362,7 @@ model=MenuItem
 
 fields=['id','title','price','inventory']
 
-**Relationship Serializer:**in database we have multiple tables to establish the relationship among them ,we need models to connect them one by one,we already know the DRF serialzer,
+**Relationship Serializer:** in database we have multiple tables to establish the relationship among them ,we need models to connect them one by one,we already know the DRF serialzer,
 
 It shows the related data of connected models ,mean we can show the multiple tables In a single query or at once together.
 
@@ -444,7 +444,7 @@ category_id=serializers.IntegerField(write_only=True)\# to not show this field i
 
 We have to check the request before processing it ,if it is get then retrieve the record otherwise create new record and save it using deserialization process.it shows how to validate the input data and then map it to an existing model using validation and deserialization process in DRF.
 
-**Renders:**these are responsible for displaying data in json,xml ,html and yaml as per clients want.
+**Renders:** these are responsible for displaying data in json,xml ,html and yaml as per clients want.
 
 There are built in Renders(jsonRender,browsableapiRender,xmlRender) and also Third Party Renders(xmlRender,yamlRender,jsonpRender).
 
@@ -478,9 +478,9 @@ browsableapirender only works when **accept header set to text/html** but if thi
 
 **Two ways to present the menu items that client wants the subset as a** result i.e.all the menu items for the appetizer or dessert category.
 
-**1-**display all the items with their names to the client ,then client himself process the data and manage the all kind of filtering .
+**1-** display all the items with their names to the client ,then client himself process the data and manage the all kind of filtering .
 
-**2-**Process the conditions on the server and display the result on the base of criteria.
+**2-** Process the conditions on the server and display the result on the base of criteria.
 
 **These both have the Pros and Cons,1-First approach** can be used as a easy way bcz in less time we can make the api for certain limit but it is not sustainable more than limit bcz it will make load on the server for much limit and it is not sensible.
 
@@ -640,7 +640,7 @@ serialized_items=MenuItemSerializer(items,many=True)
 
 return Response(serialized_items.data)
 
-**Caching:**sends saved result instead of creating one,this will minimize the load on the server and also reduce the time for responding.As RESTful API is based on the layered arechitechure ,so Caching also works on many layers.lets explore http request flow in typically layered api infrastructure as:
+**Caching:** sends saved result instead of creating one,this will minimize the load on the server and also reduce the time for responding.As RESTful API is based on the layered arechitechure ,so Caching also works on many layers.lets explore http request flow in typically layered api infrastructure as:
 
 Visitor firewallreverse proxy serverweb serverdatabase server,explanation for this as:
 
@@ -648,7 +648,7 @@ Visitor visit the domain and sends the request to the firewall and then goes to 
 
 **1-Caching on atabase server** protect the excessive read-write operation in the storage.typically they use the query cache with sql query and query results stored in the memory,they provide the results from the memory until there is no change happening in the fields of sql ,they served the result from the memory instead of running the new query against the real world data.This will reduce the processing power and time.But depends only on database server is bad idea bcz the server-side scripts still connect to it to get the cached results and for given the amount of RAM AND CPU ,database engine can only accepts the fixed number of connections/limited connections at a time.
 
-**2-Caching on Wb Server:**it runs the server-side scripts which can cached the response until there is no change in the data since last time it was created for access.It can cached the responses in the seprate cache storage which could be a simple file,a database and caching tools like Redis,Memcached which can save you connecting to database everytime. imagine there are 1000 hits per minute and we update once a day so there is no need to connect to database 1000 time instead you hit the web server and cached the result and when we update the cache so fresh results responded to the hit.No doubt it is saving the processing power and reducing the time but it still has limited capacity to response the request.
+**2-Caching on Wb Server:** it runs the server-side scripts which can cached the response until there is no change in the data since last time it was created for access.It can cached the responses in the seprate cache storage which could be a simple file,a database and caching tools like Redis,Memcached which can save you connecting to database everytime. imagine there are 1000 hits per minute and we update once a day so there is no need to connect to database 1000 time instead you hit the web server and cached the result and when we update the cache so fresh results responded to the hit.No doubt it is saving the processing power and reducing the time but it still has limited capacity to response the request.
 
 **3-Caching on reverse proxy server:** No doubt it is saving the processing power and reducing the time but it still has limited capacity to response the request. So reverse proxy server comes over this limitation of web server.Heavily traffic sites use the multiple web servers behind the proxy server to distribute the request the evenly.web servers send the result with appropriate caching headers to the proxy servers and then proxy server cached the result for certain amount of time as mentioned in those headers and served the requests from the cached.In this way the server cannot down with too many requests.Web server and proxy server send the response to the client with caching headers which tells the client that he can cached the result for specific amount of time ,during this time if request is made the client browser or application decide will use those caching headers ,serve the result from local cache or to create the call to the server.It is good idea that Always use the cache with proper strategy .
 
@@ -702,7 +702,7 @@ And now then again go to the testing tool request the url as localhost:8000/api/
 
 And send the request ,it will ask you in the response the username and password provide the admin username and password in testing tool by selecting the formurlencoded option and send the request,it will generate the token and then use this token to make http .Using built in decorators and classes and user token to authenticate api call ,Backend developer always try to optimize the security of their system.This authentication of api will serve in the api in the project.
 
-**User Roles:**we have already learnt that how to prvent the end points by using token base authentication,but there are still some issue what will be if user hit the end point delete to remove items from menu .It’s not enough to check the authentication but also authorization.So we can take the benefit of Django built in groups for authorization .
+**User Roles:** we have already learnt that how to prvent the end points by using token base authentication,but there are still some issue what will be if user hit the end point delete to remove items from menu .It’s not enough to check the authentication but also authorization.So we can take the benefit of Django built in groups for authorization .
 
 **How to do this?** Go to the admin panel and from user option create the group and create the users ,after this click on the user that you want to assign to that group by scrolling down with opeoing of user till the last under permissions having group option there click the available group select It and press the arrow and it will shift to the right box,In this way user will assigned to that group.in this way the foundation of authorization layer has been created.
 
