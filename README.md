@@ -1,4 +1,4 @@
-
+'''
 API complete notes with detail: 
 What is API?
 It stands for application programming interface.it is used to connect the front end to the backend by sending and receiving the data.
@@ -544,4 +544,4 @@ def manager(request):
         return Response({'Message':'ok'})
     return Response({'Mesage':'eror'},status.HTTP_400_BAD_REQUEST)
 
-this will lookout the username and if it is found it will show the ok message otherwise it will show the error just for super user as make post  the request in the insomnia groups/manager/users and in fromurlencoded option write the super admin username ,we can perform the CRUD operations as above are performed for super user.
+this will lookout the username and if it is found it will show the ok message otherwise it will show the error just for super user as make post  the request in the insomnia groups/manager/users and in fromurlencoded option write the super admin username ,we can perform the CRUD operations as above are performed for super user.'''
