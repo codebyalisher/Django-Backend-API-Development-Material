@@ -1,7 +1,6 @@
 **API complete notes with detail:**
 ![image](https://github.com/codebyalisher/Django-Backend-Development-Material/assets/62823194/8fd4c8aa-22f1-48da-bc10-335d8c0599a8)
 **What is API?**
-
 It stands for application programming interface.it is used to connect the front end to the backend by sending and receiving the data.
 
 **What are HTTP:**
