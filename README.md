@@ -11,7 +11,7 @@ It stands for hyper text transfer protocol.This communication protocol is widely
 
 **HTTP Methods**:also called verbs,there are **5 to access** the data over http **GET**(retrieve the data),**POST**(use to send the data to sever and create the record),**PUT**(it updates the whole record),**PATCH**(to update the partially update the data),**DELETE**(to delete the record).
 
-**HTTP requests:** it consists of different types of information encoded by a browser to send the information. A typically **request includes** the following:version type,url/path,http method, http request headers(these contains some extra information i.e. cookie,referer) and http body(optional) it contains our actual data that we sent ,Http Response(it contains also extra information like content type,length,headers,time,status code)this is the information that displays on the browser.
+**HTTP requests:**  it consists of different types of information encoded by a browser to send the information. A typically **request includes** the following:version type,url/path,http method, http request headers(these contains some extra information i.e. cookie,referer) and http body(optional) it contains our actual data that we sent ,Http Response(it contains also extra information like content type,length,headers,time,status code)this is the information that displays on the browser.
 
 **Status Code:** These Provide the Useful information about the request and response process.Some are here:
 
