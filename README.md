@@ -350,7 +350,7 @@ serialized_items=MenuItemSerializer(items)
 
 return Response(serialized_items.data)
 
-**Model Serializer:**this also works same as the above work but it has a short code,so code for this is here:
+**Model Serializer:** this also works same as the above work but it has a short code,so code for this is here:
 
 from.models import MenuItem
 
@@ -882,7 +882,7 @@ In somnia I.e.localhost:800/auth//token/login/ also you have to provide the toke
 
 Like the built token system in DRF we can also use the JWT for api authentication .
 
-**How to use it?:**To use it frst install it by this command as pipenv djangorestframework-simplejwt
+**How to use it?:** To use it frst install it by this command as pipenv djangorestframework-simplejwt
 
 After this go to installed app and add as’rest_framework_simplejwt’, after this add this in the rest_framework option first line in the code as :
 
