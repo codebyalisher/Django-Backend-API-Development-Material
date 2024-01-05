@@ -126,13 +126,14 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 INTERNAL_IPS=["127.0.0.1"]
 
-'''REST_FRAMEWORK={
+REST_FRAMEWORK={
     'DEFAULT_RENDERER_CLASSED':[
         'rest_framework.renders.JSONRender',
         'rest_framework.renders.BrowsableAPIRender',
+        'rest_framework_xml.renders.XMLRender'
     ],
     'DEFAULT_AUTHENTICATION_CLASSES':[
-        'rest_framework_simplejwt.authentication.JWTAuthentication'
+        #'rest_framework_simplejwt.authentication.JWTAuthentication'
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication'
     ],
@@ -142,7 +143,7 @@ INTERNAL_IPS=["127.0.0.1"]
         'user':'5/minute',#this is for authenticated user
         'ten':'10/minute'
         }
-}'''
+}
 
 DJOSER={
     'DJOSER_ID_FIELD':'user', #this is how field is defined used in the model for primary key some time email is also used
